@@ -5,9 +5,9 @@
 
         <title>Babylon.js sample code</title>
 
-        <!-- Babylon.js -->
+        
         <script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.1/dat.gui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
         <script src="https://preview.babylonjs.com/ammo.js"></script>
         <script src="https://preview.babylonjs.com/cannon.js"></script>
         <script src="https://preview.babylonjs.com/Oimo.js"></script>
@@ -22,9 +22,22 @@
         <script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
 
         <link rel="stylesheet" href="style.css">
-
+         
+          
     </head>
 <body>
+    <div class="sheet">      
+        <button id="button1" onClick="putObject()">Put Object</button>      
+        <button id="button2" onClick="changeShape()">Restart</button>   
+        <div class="dropdown">
+            <button class="dropbtn">Lights</button>
+            <div class="dropdown-content">
+              <button id="button3" onClick="putObject()">Light 1</button>  
+              <button id="button4" onClick="putObject()">Light 2</button>  
+              <button id="button5" onClick="putObject()">Light 3</button>  
+            </div>
+          </div>
+    </div>
     <canvas id="renderCanvas"></canvas>
     <script src="main.js"></script>
 </body>
