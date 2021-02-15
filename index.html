@@ -20,6 +20,7 @@
         <script src="https://preview.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
         <script src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
         <script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+        <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
 
         <link rel="stylesheet" href="style.css">
          
@@ -27,16 +28,38 @@
     </head>
 <body>
     <div class="sheet">      
-        <button id="button1" onClick="putObject()">Put Object</button>      
-        <button id="button2" onClick="changeShape()">Restart</button>   
+        <button class="buttons" id="buttonRotation">Rotate</button>      
+        <button class="buttons" id="buttonRestart">Restart</button>  
+        <input type="file"  id="local_file" accept=".babylon,.Obj,.txt" onchange="">
         <div class="dropdown">
             <button class="dropbtn">Lights</button>
             <div class="dropdown-content">
-              <button id="button3" onClick="putObject()">Light 1</button>  
-              <button id="button4" onClick="putObject()">Light 2</button>  
-              <button id="button5" onClick="putObject()">Light 3</button>  
+              <button class="buttons" id="buttonLight1" >Light Centered</button>  
+              <button class="buttons" id="buttonLight2" >Light Right</button>  
+              <button class="buttons" id="buttonLight3" >Light Left</button>  
             </div>
-          </div>
+        </div>
+        <div class="dropdown2">
+            <button class="dropbtn2">Background</button>
+            <div class="dropdown-content2">
+                <button class="buttons" id="buttonBackground1" >Background Green</button>  
+                <button class="buttons" id="buttonBackground2" >Background Burgundy</button>  
+                <button class="buttons" id="buttonBackground3" >Background Purple</button>  
+            </div>
+        </div>
+        <div class="dropdown3">
+            <button class="dropbtn3">Obj Proparty</button>
+            <div class="dropdown-content3">
+                <button class="buttons" id="buttonColor1" >Object Green</button>  
+                <button class="buttons" id="buttonColor2" >Object Coral</button>  
+                <button class="buttons" id="buttonColor3" >Object Yellow</button>  
+                <button class="buttons" id="buttonTexture1" >Object Dark blue</button>  
+                <button class="buttons" id="buttonTexture2" >Object Colorful</button>  
+                <button class="buttons" id="buttonTexture3" >Object Rocks</button>  
+            </div>
+        </div>
+        <button class="buttons" id="buttonSave">Save</button> 
+        <button class="buttons" id="buttonDetach">Detach</button> 
     </div>
     <canvas id="renderCanvas"></canvas>
     <script src="main.js"></script>
